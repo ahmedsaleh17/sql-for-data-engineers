@@ -33,13 +33,15 @@ ls -l testdb
 # Download the dump file from https://dev.mysql.com/doc/index-other.html
 # make sure to download the schema and data files
 # make sure to change the path to the dump file
+
+SOURCE <query-file.sql>  # This command execute all querys inside any sql file
 SOURCE /usr/databases/sakila-db/sakila-schema.sql;
 USE sakila;
 SOURCE /usr/databases/sakila-db/sakila-data.sql;
 SHOW TABLES FROM sakila;
 SELECT * FROM actor LIMIT 10;
-DESCRIBE actor;
-SHOW COLUMNS FROM actor;
+DESCRIBE actor;  # this command to display all meta data about the table.
+SHOW COLUMNS FROM actor;   # this command to display all columns in a table.
 SHOW CREATE TABLE actor\G
 
 
